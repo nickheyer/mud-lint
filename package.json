@@ -1,63 +1,37 @@
 {
-    "name": "mud-lint",
-    "displayName": "Mud Lang Support",
-    "publisher": "NicholasHeyer",
-    "engines": {
-        "vscode": "*"
-    },
-    "version": "0.1.2",
-    "icon": "images/iconw.png",
-    "galleryBanner": {
-      "color": "#C80000",
-      "theme": "dark"
-    },
-    "contributes": {
-        "languages": [
-            {
-                "id": "mud",
-                "aliases": [
-                    "Mud",
-                    "mud"
-                ],
-                "extensions": [
-                    ".mud"
-                ],
-                "configuration": "./language-configuration.json"
-            }
+  "name": "mud-lint",
+  "displayName": "Mud Lang Support",
+  "description": "Mud language support for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "mud",
+        "aliases": [
+          "Mud",
+          "mud"
         ],
-        "grammars": [
-            {
-                "language": "mud",
-                "scopeName": "source.mud",
-                "path": "./syntaxes/mud.tmLanguage.json"
-            }
-        ]
-    },
-    "main": "./extension.js",
-    "activationEvents": [
-        "onLanguage:mud"
+        "extensions": [
+          ".mud",
+          ".mudscript"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "description": "Mud language vscode integration.",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nickheyer/mud-lint.git"
-    },
-    "keywords": [
-        "mud",
-        "lint",
-        "language"
-    ],
-    "categories": ["Linters", "Programming Languages", "Other"],
-    "author": "Nicholas Heyer",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/nickheyer/mud-lint/issues"
-    },
-    "homepage": "https://github.com/nickheyer/mud-lint#readme",
-    "devDependencies": {
-        "@types/vscode": "^1.95.0"
-    }
+    "grammars": [
+      {
+        "language": "mud",
+        "scopeName": "source.mud",
+        "path": "./syntaxes/mud.tmLanguage.json"
+      }
+    ]
+  },
+  "main": "./src/extension.js",
+  "dependencies": {}
 }
