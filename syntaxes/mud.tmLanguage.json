@@ -1,0 +1,69 @@
+{
+    "scopeName": "source.mud",
+    "patterns": [{
+        "include": "#expression"
+    }],
+    "repository": {
+        "expression": {
+            "patterns": [{
+                "include": "#comments"
+            }, {
+                "include": "#strings"
+            }, {
+                "include": "#variables"
+            }, {
+                "include": "#keywords"
+            }, {
+                "include": "#functions"
+            }, {
+                "include": "#numbers"
+            }, {
+                "include": "#operators"
+            }]
+        },
+        "comments": {
+            "patterns": [{
+                "name": "comment.line.number-sign.mud",
+                "match": "#.*$"
+            }]
+        },
+        "strings": {
+            "name": "string.quoted.double.mud",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [{
+                "name": "constant.character.escape.mud",
+                "match": "\\\\."
+            }]
+        },
+        "variables": {
+            "patterns": [{
+                "name": "variable.other.mud",
+                "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
+            }]
+        },
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.mud",
+                "match": "\\b(if|while|for|function|fn|goto|not|set|length|release)\\b"
+            }, {
+                "name": "constant.language.mud",
+                "match": "\\b(true|false)\\b"
+            }]
+        },
+        "functions": {
+            "patterns": [{
+                "name": "support.function.mud",
+                "match": "\\b(echo|eval|print|println|read|array|map|range|cd|pwd|ls|cp|mv|rm|mkdir|rmdir|cat|exit|quit)\\b"
+            }]
+        },
+        "numbers": {
+            "name": "constant.numeric.mud",
+            "match": "\\b[0-9]+\\b"
+        },
+        "operators": {
+            "name": "keyword.operator.mud",
+            "match": "[+\\-=<>]+"
+        }
+    }
+}
