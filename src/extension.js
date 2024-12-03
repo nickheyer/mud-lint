@@ -75,7 +75,26 @@ function activate(context) {
     legend
   );
 
-  context.subscriptions.push(completionProvider, semanticTokensProvider);
+  // HOVER ON
+  const hoverProvider = vscode.languages.registerHoverProvider(
+    { language: 'mud' },
+    {
+      provideHover(document, position) {
+        const word = document.getText(document.getWordRangeAtPosition(position));
+        const entry = completionsData.completions.find(item => item.label === word);
+  
+        if (entry) {
+          return new vscode.Hover(
+            new vscode.MarkdownString(`**${entry.label}**\n\n${entry.info}`)
+          );
+        }
+  
+        return null;
+      }
+    }
+  );
+
+  context.subscriptions.push(completionProvider, semanticTokensProvider, hoverProvider);
 }
 
 function deactivate() {}

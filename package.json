@@ -1,26 +1,47 @@
 {
   "name": "mud-lint",
   "displayName": "Mud Lang Support",
-  "description": "Mud language support for VS Code",
-  "version": "0.0.1",
+  "description": "Provides rich language support for Mud, including syntax highlighting, IntelliSense, and more.",
+  "version": "1.5.0",
+  "publisher": "NicholasHeyer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholasheyer/mud-lint"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/nicholasheyer/mud-lint",
   "engines": {
     "vscode": "^1.95.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Linters"
+  ],
+  "icon": "images/iconw.png",
+  "galleryBanner": {
+    "color": "#2b2b2b", 
+    "theme": "dark"
+  },
+  "badges": [
+    {
+      "label": "Build Status",
+      "url": "https://github.com/nicholasheyer/mud-lint/actions",
+      "href": "https://github.com/nicholasheyer/mud-lint/actions",
+      "description": "Github Actions"
+    },
+    {
+      "label": "Downloads",
+      "url": "https://img.shields.io/visual-studio-marketplace/d/NicholasHeyer.mud-lint",
+      "href": "https://marketplace.visualstudio.com/items?itemName=NicholasHeyer.mud-lint",
+      "description": "Download Mud Lint"
+    }
   ],
   "contributes": {
     "languages": [
       {
         "id": "mud",
-        "aliases": [
-          "Mud",
-          "mud"
-        ],
-        "extensions": [
-          ".mud",
-          ".mudscript"
-        ],
+        "aliases": ["Mud", "mud"],
+        "extensions": [".mud", ".mudscript"],
         "configuration": "./language-configuration.json"
       }
     ],

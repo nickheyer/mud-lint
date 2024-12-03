@@ -1,9 +1,18 @@
-# Mud Language Support
+# Mud Lang Support
 
-Provides syntax highlighting and language support for the Mud programming language.
+![Mud Full Logo](images/Mud_full_transparent_scaled_gw.png)
 
-## Features
+Rich language support for **Mud**, providing:
 
-- Syntax highlighting for Mud
-- Basic language configuration
-- Support for comments, strings, and keywords
+- Syntax Highlighting
+- IntelliSense
+- Signature Help
+- Hover Information
+- Code Actions
+
+## Installation
+
+1. Open the Extensions view (`Ctrl+Shift+X`).
+2. Search for `Mud Lang Support`.
+3. Click **Install**.
+
