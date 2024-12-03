@@ -1,6 +1,6 @@
 # Mud Lang Support
 
-![Mud Full Logo](images/Mud_full_transparent_scaled_gw.png)
+![Mud Full Logo](./images/Mud_full_transparent_scaled_gw.png)
 
 Rich language support for **Mud**, providing:
 

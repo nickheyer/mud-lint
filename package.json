@@ -2,14 +2,14 @@
   "name": "mud-lint",
   "displayName": "Mud Lang Support",
   "description": "Provides rich language support for Mud, including syntax highlighting, IntelliSense, and more.",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "publisher": "NicholasHeyer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicholasheyer/mud-lint"
+    "url": "https://github.com/nickheyer/mud-lint"
   },
   "license": "MIT",
-  "homepage": "https://github.com/nicholasheyer/mud-lint",
+  "homepage": "https://heyer.app",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -23,12 +23,6 @@
     "theme": "dark"
   },
   "badges": [
-    {
-      "label": "Build Status",
-      "url": "https://github.com/nicholasheyer/mud-lint/actions",
-      "href": "https://github.com/nicholasheyer/mud-lint/actions",
-      "description": "Github Actions"
-    },
     {
       "label": "Downloads",
       "url": "https://img.shields.io/visual-studio-marketplace/d/NicholasHeyer.mud-lint",
